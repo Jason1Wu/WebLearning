@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script> 
+<link rel="stylesheet" type="text/css" href="../assets/css/test-d6f02a3b44.css">
+
+<head>
+	<title>汽车新闻</title>
+</head>
+<body>
+	<header>
+		<a href="">二手车</a>
+		<h1>汽车新闻</h1>
+		<a href="#" class="home"></a>
+	</header>
+	<ul class="list">
+		<li class="item">
+			<div class="icon-hot"></div>
+			<p class="title">最美自主车致尚XT竞争力分析</p>
+			<div class="info">
+				<span class="time">07-04 06:30</span>
+				<span class="author">搜狐汽车</span>
+			</div>
+		</li>
+	</ul>
+	<div id="app">
+		<keep-alive>
+			<router-view></router-view>
+		</keep-alive>
+	</div>
+<!-- 	<div id="app">
+		<div>{{message}}</div>
+		<div>{{title}}</div>
+		<ul class="clearfix list">
+			<li>{{message}}</li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div> -->
+</body>
+</html>

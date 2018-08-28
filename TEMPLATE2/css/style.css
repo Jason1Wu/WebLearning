@@ -1,0 +1,89 @@
+/*重置样式*/
+body,div,p,ul,ol,dl,dt,dd,li,form,input,table,th,td,img,h1,h2,h3,h4,h5,h6 { margin:0 ;padding:0; }
+body { background:#fff ; color:#000; font-size:16px; font-style:normal; font-family:"Microsoft Yahei"; }
+p{line-height:1.6}
+h1,h2,h3{line-height:2}
+em, b, i { font-style:normal;}
+img { border:none;}
+a { text-decoration:none; color:#000;}
+a:hover { text-decoration:none;}
+li { list-style:none;}
+table { border-spacing:0; border-collapse:collapse;}
+
+/*清除浮动*/
+.clearfix { *zoom: 1;} 
+.clearfix:before, .clearfix:after { display: table; line-height: 0; content: "";}
+.clearfix:after { clear: both;}
+.pull-left{float: left !important;}
+.pull-right{float: right !important;}
+/*the end*/
+
+
+i.icon-shopCar{position: fixed;font-size: 25px;right: 10px;bottom: 10px;color: orange;}
+
+/*top*/
+.top{background-color: #f5f5f5;font-size: 14px;color: #7c7a7a;}
+.top .top-wrapper{width: 1000px;height: 30px;margin: 0 auto;text-align: center;line-height: 30px;}
+.top a{color: #7c7a7a;}
+.top .signIn{width: 82px;color: #7fb726;padding-left: 22px;padding-right: 18px;}
+.top .menu a{padding-left: 14px;}
+.top .menu a::after{content: "";border-right: 1px solid #7c7a7a;display: inline-block;height: 15px;vertical-align: -2px;padding-right: 14px;}
+.top .menu a:last-child::after{display: none;}
+.top .icon-consumer{float: left;margin-right: -4px;}
+
+/*header*/
+header{width: 1000px;height: 126px;margin: 0 auto;position: relative;}
+header img{float: left;}
+header .snail{margin-top: 35px;}
+header .eatmore{margin-top: 52px;margin-right: 149px;}
+header .search{float: left;margin-right: 48px;}
+header .hot{margin: 32px 0 21px 12px;line-height: 1;font-size: 12px;color: #a0a0a0;}
+header input{border: 2px solid #6b9824;width: 285px;height: 36px;float: left;}
+header button{float: left;border: 8px solid #6b9824;background-color: #65921e;line-height: 22px;color: #fff;}
+header .icon-phone{font-size: 35px;margin-top: 65px;display: inline-block;}
+header .words{color: #282727;font-size: 14px;display: inline-block;position: absolute;right: 8px;top: 51px;}
+header .number{font-size: 26px;color: #f23d0c;position: absolute;right: -66px;top: 71px;}
+
+/*navigation*/
+.nav-wrapper{background-color: #7fb726;}
+.nav{width: 1000px;height: 36px;margin: 0 auto;}
+.nav a{float: left;color: #fcfcf6;font-size: 16px;line-height: 36px;text-align: center;width: 179px;border-left: 1px solid #6b9824;position: relative;}
+.nav a:first-child{width: 137px;background-color: #6b9824;}
+.nav a:hover{background-color: #6b9824;}
+.nav .tri{width: 0;height: 0;border-width: 8px 5px;border-style: solid;border-color: #fff transparent transparent transparent;position: absolute;top: 15px;right:  30px;}
+
+/*banner*/
+.banner{height: 600px;position: relative;overflow: hidden;}
+.banner .list-banner{position:absolute;width:11515px;}
+.banner .list-banner li{float:left;width:1919px;height:600px;}
+.banner .list-num-wp{position:absolute;bottom:23px;width:1919px;height:21px;}
+.banner .list-num{width: 300px;margin:0 auto;}
+.banner .list-num a{display:inline;float:left;width:21px;height:21px;margin:0 15px; background-color: #8b7a73;border-radius: 50%;}
+.banner .list-num a.hover{background-color: #fff;border: 3px solid #5e6a05;}
+.banner .left a{background: url(img/left.png);width: 54px;height: 117px;display: block;position: absolute;top: 224px;left: 120px;}
+.banner .right a{background: url(img/right.png);width: 54px;height: 117px;display: block;position: absolute;top: 224px;right: 120px;}
+
+/*sort*/
+.sort{width: 1000px;height: 346px;margin: 66px auto 89px;}
+.sort a{float: left;height: 346px;background-color: #f3f8d2;width: 293px;position: relative;}
+.sort .middle{margin: auto 57px;}
+.sort a .title{position: absolute;width: 262px;background-color: #7fb726;height: 71px;color: #fcf9f9;font-size: 40px;line-height: 71px;text-align: center;top: 1px;}
+.sort .arc{position: absolute;right: 0;top: 1px;border-width: 35.5px 31px;border-style: solid;border-color: #7fb726 transparent #7fb726 #7fb726;}
+.sort .img1{position: absolute;top: 100px;right: 12px;}
+.sort .img2{position: absolute;bottom: 28px;right: 23px;}
+.sort .img3{position: absolute;bottom: 13px;left: 1px;}
+
+/*recommend*/
+.recommend{position: relative;}
+.recommend .head-wrap{height: 80px;margin-bottom: 64px;}
+.recommend .head-wrap .leftBar{float: left;height: 1px;background-color: #d4d2d2;width: 43%;margin-top: 40px;}
+.recommend .head{font-size: 40px;color: #e58225;line-height: 80px;border: 1px solid #d4d2d2;text-align: center;width: 253px;margin: auto;position: absolute;left: 0;right: 0;box-shadow: 5px 0 0 5px #fff, -5px 0 0 5px #fff;}
+.recommend .head-wrap .rightBar{float: right;height: 1px;background-color: #d4d2d2;width: 43%;margin-top: 40px;}
+.recommend .item-list{height: 326px;width: 1000px;margin: 0 auto;overflow: hidden;position: relative;}
+.recommend .discount{height: 326px;position: absolute;}
+.recommend .discount a{background-color: #f5f5f5;height: 326px;width: 235px;margin-right: 20px;float: left;}
+.recommend .discount .hover1{margin-right: 0;}
+.recommend .discount .title{font-size: 16px;color: #6e6c6c;line-height: 50px;}
+.recommend .discount .price-token{font-size: 10px;color: #838383;margin-left: 5px;}
+.recommend .discount .price{font-size: 16px;color: #fb9006;margin-left: -5px;}
+.recommend .discount .purchase{width: 84px;height: 23px;background-color: #70b009;text-align: center;color: #fff;border-radius: 4px;float: right;margin-right: 11px;box-shadow: 2px 2px 2px #bdbdbd;font-size: 12px;line-height: 23px;}

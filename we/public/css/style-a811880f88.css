@@ -1,0 +1,133 @@
+html,body,div,span,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,a,address,em,img,ol,ul,li,fieldset,form,label,legend,table,tbody,tfoot,thead,tr,th,td,i,b,s{margin:0;padding:0;border:0;font-family:Helvetica,Arial}
+ul,ol{list-style:none}
+body,html{background-color: #fdeb01;overflow: hidden;width: 100%;height: 100%;}
+.loading{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: #f3f2ee;
+}
+.loading .loading-text-wrap{
+		width: 100vw;
+		height: 70.63vw;
+		background: url(../img/loading_bg-d241dcf696.png) 0 0 no-repeat /cover;
+		position: absolute;
+		left: 0;
+		top: 40.16vw;
+	}
+.loading .loading-text-wrap .text{
+			position: absolute;
+			text-align: center;
+			width: 100%;
+			top: 52.66vw;
+			left: 0;
+			color: #7f7f7f;
+			font-size: 2.81vw;
+		}
+.loading .loading-text-wrap .percent{
+			position: absolute;
+			top: 60.62vw;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			color: #5d5d5d;
+			font-size: 5.63vw;
+		}
+.loading .cloud{
+		position: absolute;
+		width: 309.38vw;
+		height: 75vw;
+		background: url(../img/loading_cloud-8839c92b88.png) no-repeat 0 0 /cover;
+		top: 88.91vw;
+		left: 0;
+	}
+.loading .cp{
+		position: absolute;
+		width: 100%;
+		bottom: 4.22vw;
+		text-align: center;
+		color: #707070;
+		font-size: 3.13vw;
+	}
+.item-wrap{
+	display: none;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+.item-wrap ul{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
+	}
+.item-wrap ul li{
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			left: 0;
+			top: 0;
+		}
+.item-wrap ul .cover{
+			background: url(../img/cover_bg-190145f4bc.png) 0 0 no-repeat /cover;
+		@keyframes covertextam{
+				0%{height:0;}
+				10%{height: 3.44vw;}
+				20%{height:9.06vw;}
+				30%{height: 11.72vw;}
+				40%{height: 16.09vw;}
+				50%{height: 18.75vw;}
+				60%{height: 22.19vw;}
+				70%{height: 22.19vw;}
+				80%{height: 22.19vw;}
+				100%{height: 49.84vw;}				
+			}
+		}
+.item-wrap ul .cover .cover-text{
+				position: absolute;
+				background: url(../img/cover_text-ff7e0810bc.png) 0 0 no-repeat /cover;
+				width: 55.63vw;
+				height: 0;
+				left: 21.56vw;
+				top: 59.69vw;
+			}
+.item-wrap ul .cover .cover-text-am{animation:covertextam 8s linear both;}
+.item-wrap ul .choose{
+			background: url(../img/choose_bg-c0b0f4f5bf.png) 0 0 no-repeat /cover;
+		}
+.item-wrap ul .choose .choose-text{
+				position: absolute;
+				left: 8.44vw;
+				top: 42.19vw;
+				text-align: center;
+				width: 83.13vw;
+				height: 30.94vw;
+				line-height: 7.81vw;
+				font-size: 4.06vw;
+				color: #333;
+			}
+.item-wrap ul .choose .choose-text p{text-align: left;}
+.item-wrap ul .choose .btn{
+				position: absolute;
+				left: 8.44vw;
+				top: 72.97vw;
+				width: 83.13vw;
+			}
+.item-wrap ul .choose .btn .btn-boy{
+					position: absolute;
+					left: 7.5vw;
+					width: 22.5vw;
+					height: 46.41vw;
+					background: url(../img/choose_boy-7391412ff4.png) 0 0 no-repeat /cover;
+				}
+.item-wrap ul .choose .btn .btn-girl{
+					position: absolute;
+					left: 50.94vw;
+					top: 0;
+					width: 22.5vw;
+					height: 46.41vw;
+					background: url(../img/choose_girl-456049a5c3.png) 0 0 no-repeat /cover;
+				}

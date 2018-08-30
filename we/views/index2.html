@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link rel="stylesheet" type="text/css" href="../public/css/style-1decca7361.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/style-75a7896e8b.css">
     <script src="../public/js/jquery-69f7f7005f.js"></script>  <!-- jquery,操作页面上html元素 -->
     <script src="../public/js/velocity-e4911a8859.js"></script> <!-- 动画库 -->
     <script src="../public/js/velocity-b8ab417484.ui.js"></script><!-- 动画库 -->
@@ -24,14 +24,29 @@
             <li class="cover">
                 <div class="cover-text"></div>
             </li>
+
             <li class="choose">
             	<div class="choose-text">
             		<p>你成了“《大家》国”的一名考生，你必须通过考试来获得你的功名！穿越了，给你一次重新做人的机会：</p>
             	</div>
             	<div class="btn">
-            		<div class="btn-boy"></div>
-            		<div class="btn-girl"></div>
+            		<div class="btn-boy move"></div>
+            		<div class="btn-girl move"></div>
             	</div>
+            </li>
+
+            <li class="main">
+                <div class="share-btn"></div>
+                <div class="person"></div>
+                <div class="desk"></div>
+                <div class="btns">
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                    <div class="btn-upgradeperson"></div>
+                </div>
             </li>
         </ul>
     </div>
@@ -63,10 +78,14 @@
                 $('.item-wrap').show();
                 $('.cover-text').addClass('cover-text-am');
                 var timer = setTimeout(function(){$('.cover').hide();$('.choose').show();},10000);
-                },1500)
+                },1000)
     		}
     	}
     }
+
+    $('.choose').on('click','.move',function(){
+        $(this).closest('li').siblings().hide().end().next().show().end().closest('.item-wrap').css({'transform': 'translateY(' + -$(window).height()+'px)'});
+    });
 
 </script>
 </body>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+    <script src="../public/js/jquery.js"></script>  <!-- jquery,操作页面上html元素 -->
+    <script src="../public/js/velocity.js"></script> <!-- 动画库 -->
+    <script src="../public/js/velocity.ui.js"></script><!-- 动画库 -->
+    <script src="../public/js/shake.js"></script><!-- 摇一摇组件 -->
+<head>
+	<title>汽车新闻</title>
+</head>
+<body>
+	<div class="loading">
+		<div class="loading-wrap">
+			<canvas id="mycanvas" width="100" height="100"></canvas>
+			<div class="loading-pic"></div>
+			<div class="loading-text">100%</div>
+		</div>
+	</div>
+	<div class="home">
+		<div class="title"></div>
+		<div class="subtitle"></div>
+		<div class="entitle"></div>
+		<div class="hand-wrap">
+			
+		</div>
+	</div>
+	<div class="result">
+<!-- 		result
+title
+answer  avatar... -->
+	</div>
+<script type="text/javascript">
+
+		var canvas = document.getElementById('mycanvas');
+		var context = canvas.getContext('2d') //返回一个用于在画布上绘图的环境
+		context.beginPath()//起始一条路径，或重置当前路径
+		context.moveTo(50,50);//把路径移动到画布中的指定点，不创建线条
+		context.arc(50,50,50,0,2*Math.PI,false);
+		context.closePath()//创建从当前点回到起始点的路径
+		context.fillStyle='#fff'//属性设置或返回用于填充绘画的颜色、渐变或模式。
+		context.fill()//填充当前的路径
+	function drawCircle(percent) {
+
+
+		console.log(percent)
+		context.beginPath()//起始一条路径，或重置当前路径
+		context.moveTo(50,50);//把路径移动到画布中的指定点，不创建线条
+		// context.arc(50,50,50,0+1.5*Math.PI,1.5*Math.PI+(2*Math.PI)*percent/100,false);
+		context.arc(50,50,50,1.5*Math.PI,1.5*Math.PI+(-(2*Math.PI)*percent/100),true);
+		// context.arc(50,50,50,0,-(2*Math.PI)*percent/100,true);
+		// context.arc(50,50,50,0,(2*Math.PI)*(1-percent/100)||2*Math.PI,true);
+			// context.arc(50,50,50,0,0.5*Math.PI,true);
+			// context.arc(50,50,50,0,0.5*Math.PI,false);
+		context.closePath()//创建从当前点回到起始点的路径
+		context.fillStyle='#ffa9ad'//属性设置或返回用于填充绘画的颜色、渐变或模式。
+		context.fill()//填充当前的路径
+		$('.loading-text').text(percent+'%')
+	}
+	// drawCircle()
+
+	// 加载一张图片缓存
+	// var img = new Image();
+	// 	img.src = pics[index];
+	// 	img.onload = function(){
+	// 		console.log(index);
+	// 		index++
+	// 	}
+	// 加载多张图片
+    var pics = ["../public/img/entitle.png","../public/img/hand.png","../public/img/hand_finger.png","../public/img/home_avatar0.png","../public/img/home_avatar1.png","../public/img/home_avatar2.png","../public/img/home_avatar3.png","../public/img/home_avatar4.png","../public/img/home_avatar5.png","../public/img/home_avatar6.png","../public/img/home_shake_text.png","../public/img/loading.png","../public/img/result_answer.png","../public/img/result_answer0.png","../public/img/result_answer1.png","../public/img/result_answer2.png","../public/img/result_answer3.png","../public/img/result_answer4.png","../public/img/result_answer6.png","../public/img/result_avatar.png","../public/img/result_avatar_bg.png","../public/img/result_avatar_bg_1.png","../public/img/result_avatar_bg_2.png","../public/img/result_avatar0.png","../public/img/result_avatar1.png","../public/img/result_avatar2.png","../public/img/result_avatar3.png","../public/img/result_avatar4.png","../public/img/result_avatar6.png","../public/img/result_btn.png","../public/img/result_text.png","../public/img/result_text0.png","../public/img/result_text1.png","../public/img/result_text2.png","../public/img/result_text3.png","../public/img/result_text4.png","../public/img/result_text6.png","../public/img/result_title.png","../public/img/shake_tips.png","../public/img/share.jpg","../public/img/share.png","../public/img/share0.jpg","../public/img/share1.jpg","../public/img/share2.jpg","../public/img/share3.jpg","../public/img/share4.jpg","../public/img/share5.jpg","../public/img/share6.jpg","../public/img/subtitle.png","../public/img/title.png","../public/img/yue.png"]
+
+	var index = 0;
+	var pics_length = pics.length
+	// for (var i =0; i <pics_length; i++) {
+	// 	var img = new Image();
+	// 	img.src = pics[i];
+	// 	// console.log(i+'iiii')
+	// 	// console.log(index+'index');
+	// 	//异步之外用i，异步内部用index
+	// 	img.onload = function(){//异步
+	// 		index++;
+	// 		var percent = Math.floor(index/pics_length*100)
+	// 		drawCircle(percent)
+	// 	}
+	// }
+	var i = 0;
+	while (i <pics_length)
+  	{
+	  		var img = new Image();
+		img.src = pics[i];
+		// console.log(i+'iiii')
+		// console.log(index+'index');
+		//异步之外用i，异步内部用index
+		img.onload = function(){//异步
+			index++;
+			var percent = Math.floor(index/pics_length*100)
+			drawCircle(percent)
+			if(percent == 100){
+				$('.loading').hide();
+				$('.home').show(function(){
+					// callout.flash 
+					// transition.perspectiveDownIn
+					$('.title').velocity('callout.bounce',{
+							complete:function(){
+								$('.subtitle').velocity('callout.flash',
+									{
+										complete:function(){
+											$('.entitle').velocity('transition.perspectiveDownIn',
+												{
+													complete:function(){
+														$('.hand-wrap').show()
+														Shake.start()
+													    window.addEventListener('shake',function(){
+													    	$('.home').hide()
+													    	$('.result').show();
+													    })
+													}
+												}
+											)
+										},
+										display:"block"
+									}
+								)
+							},
+							display: "block" 
+						}
+					)
+
+					// $('.title').velocity('callout.bounce',{display:'block'})
+					// $('.subtitle').velocity('callout.flash',{display:'block'})
+					// $('.entitle').velocity('transition.perspectiveDownIn',{display:'block'})
+					
+				});
+			}
+			// if(i==index){
+
+			// }
+		}
+	  	i++;
+	  }
+// console.log(3)
+</script>
+</body>
+</html>

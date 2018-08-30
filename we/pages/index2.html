@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+    <script src="../public/js/jquery.js"></script>  <!-- jquery,操作页面上html元素 -->
+    <script src="../public/js/velocity.js"></script> <!-- 动画库 -->
+    <script src="../public/js/velocity.ui.js"></script><!-- 动画库 -->
+    <!-- <link rel="icon" href=""> -->
+<head>
+	<title>大家</title>
+</head>
+<body>
+	<div class="loading">
+			<div class="loading-text-wrap">
+				<div class="text">建议在WIFI下观看，正在加载中...</div>
+				<div class="percent">0%</div>
+			</div>
+			<div class="cloud"></div>
+			<div class="cp">出品：xxx公司出品</div>
+	</div>
+
+	<div class="item-wrap">
+        <ul>
+            <li class="cover">
+                <div class="cover-text"></div>
+            </li>
+            <li class="choose">
+            	<div class="choose-text">
+            		<p>你成了“《大家》国”的一名考生，你必须通过考试来获得你的功名！穿越了，给你一次重新做人的机会：</p>
+            	</div>
+            	<div class="btn">
+            		<div class="btn-boy"></div>
+            		<div class="btn-girl"></div>
+            	</div>
+            </li>
+        </ul>
+    </div>
+<script type="text/javascript">
+	    $(".cloud").velocity(
+        { 
+          // 'background-position': '100% 0%'
+          'left':'-309vw'
+        },
+        { 
+          duration: 10000,
+          loop:true
+        }
+    );
+
+    var count = 1;
+    var pics = ["../public/img/answer_allopen_bg.png","../public/img/answer_bg.png","../public/img/answer_cat.png","../public/img/answer_correct.png","../public/img/answer_failed_bg.png","../public/img/answer_rui.png","../public/img/answer_success_bg.png","../public/img/answer_wen.png","../public/img/answer_wrong.png","../public/img/answer_zhi.png","../public/img/answer_zhong.png","../public/img/choose_bg.png","../public/img/choose_boy.png","../public/img/choose_girl.png","../public/img/cover_bg.png","../public/img/cover_clou1.png","../public/img/cover_clou2.png","../public/img/cover_clou3.png","../public/img/cover_clou4.png","../public/img/cover_text.png","../public/img/home/","../public/img/leaf1.png","../public/img/leaf2.png","../public/img/leaf3.png","../public/img/loading_bg.png","../public/img/loading_cloud.png","../public/img/mainscene_bg.png","../public/img/mainscene_rui.png","../public/img/mainscene_rui_bi.png","../public/img/mainscene_table.png","../public/img/mainscene_tips1.png","../public/img/mainscene_tips2.png","../public/img/mainscene_tips3.png","../public/img/mainscene_tips4.png","../public/img/mainscene_upgrade.png","../public/img/mainscene_wen.png","../public/img/mainscene_wen_zhi.png","../public/img/mainscene_xing.png","../public/img/mainscene_xing_cat.png","../public/img/mainscene_zhi.png","../public/img/mainscene_zhi_hua.png","../public/img/mainscene_zhong.png","../public/img/mainscene_zhong_bian.png","../public/img/me_bottom.png","../public/img/me_close.png","../public/img/memorial_1.png","../public/img/memorial_2.png","../public/img/memorial_3.png","../public/img/memorial_4.png","../public/img/memorial_bg.png","../public/img/memorial_up_btn.png","../public/img/ms_chakanzouzhang.png","../public/img/ms_guifei.png","../public/img/ms_huangdi.png","../public/img/ms_nvwang.png","../public/img/ms_taijian.png","../public/img/ms_xianling.png","../public/img/ms_xiaojie.png","../public/img/ms_xiaozhu.png","../public/img/ms_yatou.png","../public/img/ms_yayi.png","../public/img/ms_zaixiang.png","../public/img/pop_renwu_bg.png","../public/img/share.jpg","../public/img/share.png","../public/img/share_btn.png","../public/img/upgrade_btn.png"];
+
+    for(var i = 0;i < pics.length;i++){
+    	var img = new Image();
+    	img.src = pics[i];
+    	img.onload = function(){
+    		count++;
+    		var percent = Math.floor(count/pics.length*100);
+    		$('.percent').text(percent + '%');
+    		if(percent == 100){
+                setTimeout(function(){
+                $('.loading').hide();
+                $('.item-wrap').show();
+                $('.cover-text').addClass('cover-text-am');
+                var timer = setTimeout(function(){$('.cover').hide();$('.choose').show();},10000);
+                },1500)
+    		}
+    	}
+    }
+
+</script>
+</body>
+</html>

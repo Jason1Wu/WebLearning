@@ -1,0 +1,138 @@
+html,body,div,span,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,a,address,em,img,ol,ul,li,fieldset,form,label,legend,table,tbody,tfoot,thead,tr,th,td,i,b,s{margin:0;padding:0;border:0;font-family:Helvetica,Arial}
+ul,ol{list-style:none}
+body,html{background-color: #fdeb01;overflow: hidden;width: 100%;height: 100%;}
+
+.loading{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: #f3f2ee;
+	.loading-text-wrap{
+		width: 640px;
+		height: 452px;
+		background: url(../img/loading_bg.png) 0 0 no-repeat /cover;
+		position: absolute;
+		left: 0;
+		top: 257px;
+		.text{
+			position: absolute;
+			text-align: center;
+			width: 100%;
+			top: 337px;
+			left: 0;
+			color: #7f7f7f;
+			font-size: 18px;
+		}
+		.percent{
+			position: absolute;
+			top: 388px;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			color: #5d5d5d;
+			font-size: 36px;
+		}
+	}
+	.cloud{
+		position: absolute;
+		width: 1980px;
+		height: 480px;
+		background: url(../img/loading_cloud.png) no-repeat 0 0 /cover;
+		top: 569px;
+		left: 0;
+	}
+	.cp{
+		position: absolute;
+		width: 100%;
+		bottom: 27px;
+		text-align: center;
+		color: #707070;
+		font-size: 20px;
+	}
+}
+
+@keyframes covertextam{
+				0%{height:0;}
+				10%{height: 22px;}
+				20%{height:58px;}
+				30%{height: 75px;}
+				40%{height: 103px;}
+				50%{height: 120px;}
+				60%{height: 142px;}
+				70%{height: 242px;}
+				95%{height: 280px;}
+				100%{height: 638px;}				
+			}
+
+.item-wrap{
+	display: none;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	ul{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
+		li{
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			left: 0;
+			top: 0;
+		}
+		.cover{
+			background: url(../img/cover_bg.png) 0 0 no-repeat /cover;
+			.cover-text{
+				position: absolute;
+				background: url(../img/cover_text.png) 0 0 no-repeat /cover;
+				width: 356px;
+				height: 0;
+				left: 138px;
+				top: 382px;
+			}
+		.cover-text-am{animation:covertextam 8s linear both;}
+		}
+		
+		.choose{
+			display: none;
+			background: url(../img/choose_bg.png) 0 0 no-repeat /cover;
+			.choose-text{
+				position: absolute;
+				left: 54px;
+				top: 270px;
+				text-align: center;
+				width: 532px;
+				height: 198px;
+				line-height: 50px;
+				font-size: 26px;
+				color: #333;
+				p{text-align: left;}
+			}
+			.btn{
+				position: absolute;
+				left: 54px;
+				top: 467px;
+				width: 532px;
+				.btn-boy{
+					position: absolute;
+					left: 48px;
+					width: 144px;
+					height: 297px;
+					background: url(../img/choose_boy.png) 0 0 no-repeat /cover;
+				}
+				.btn-girl{
+					position: absolute;
+					left: 326px;
+					top: 0;
+					width: 144px;
+					height: 297px;
+					background: url(../img/choose_girl.png) 0 0 no-repeat /cover;
+				}
+			}
+		}
+	}
+}

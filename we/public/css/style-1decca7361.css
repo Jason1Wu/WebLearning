@@ -49,6 +49,18 @@ body,html{background-color: #fdeb01;overflow: hidden;width: 100%;height: 100%;}
 		color: #707070;
 		font-size: 3.13vw;
 	}
+@keyframes covertextam{
+				0%{height:0;}
+				10%{height: 3.44vw;}
+				20%{height:9.06vw;}
+				30%{height: 11.72vw;}
+				40%{height: 16.09vw;}
+				50%{height: 18.75vw;}
+				60%{height: 22.19vw;}
+				70%{height: 37.81vw;}
+				95%{height: 43.75vw;}
+				100%{height: 99.69vw;}				
+			}
 .item-wrap{
 	display: none;
 	position: absolute;
@@ -73,18 +85,6 @@ body,html{background-color: #fdeb01;overflow: hidden;width: 100%;height: 100%;}
 		}
 .item-wrap ul .cover{
 			background: url(../img/cover_bg-190145f4bc.png) 0 0 no-repeat /cover;
-		@keyframes covertextam{
-				0%{height:0;}
-				10%{height: 3.44vw;}
-				20%{height:9.06vw;}
-				30%{height: 11.72vw;}
-				40%{height: 16.09vw;}
-				50%{height: 18.75vw;}
-				60%{height: 22.19vw;}
-				70%{height: 22.19vw;}
-				80%{height: 22.19vw;}
-				100%{height: 49.84vw;}				
-			}
 		}
 .item-wrap ul .cover .cover-text{
 				position: absolute;
@@ -96,6 +96,7 @@ body,html{background-color: #fdeb01;overflow: hidden;width: 100%;height: 100%;}
 			}
 .item-wrap ul .cover .cover-text-am{animation:covertextam 8s linear both;}
 .item-wrap ul .choose{
+			display: none;
 			background: url(../img/choose_bg-c0b0f4f5bf.png) 0 0 no-repeat /cover;
 		}
 .item-wrap ul .choose .choose-text{

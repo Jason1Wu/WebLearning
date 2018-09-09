@@ -1,0 +1,6 @@
+.make-margin-top(@min,@max,@loop)
+	when(@min <= @max){
+		.mt@{min}{margin-top: @min*1px;}
+		.make-margin-top(@min+@loop,@max,@loop)
+	}
+.make-margin-top(5,60,5);

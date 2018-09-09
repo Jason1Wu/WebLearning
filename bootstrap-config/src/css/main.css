@@ -1,0 +1,53 @@
+.index-banner{height: 100px;display: flex;}
+.index-banner a{flex: 1;color: inherit;text-decoration: none;}
+.index-banner .description{display: none;text-align: center;}
+.index-banner .title{font-size: 12px;text-align: center;font-weight: bold;}
+.banner-icon{display: block;width: 38px;height: 38px;margin: 20px auto 10px;}
+.icon-coins{background: url(images/banner.png) no-repeat;}
+.icon-loop{background: url(images/banner.png) -38px 0 no-repeat;}
+.icon-clock{background: url(images/banner.png) -76px 0 no-repeat;}
+.icon-brush{background: url(images/banner.png) -114px 0 no-repeat;}
+.icon-tick{background: url(images/banner.png) -152px 0 no-repeat;}
+
+.index-project .hover-box{top: 0;left: 0;right: 0;bottom: 0;}
+.index-project .hover-bg{top: 20px;bottom: 20px;left: 24px;right: 24px;background-color: #000;opacity: .5;}
+.index-project .bg-top-left{width: 24px;height: 18px;border-left: 1px solid #fff;border-top: 1px solid #fff;top: 12px;left: 13px;}
+.index-project .bg-top-right{width: 24px;height: 18px;border-right: 1px solid #fff;border-top: 1px solid #fff;top: 12px;right: 13px;}
+.index-project .bg-bottom-right{width: 24px;height: 18px;border-right: 1px solid #fff;border-bottom: 1px solid #fff;bottom: 12px;right: 13px;}
+.index-project .bg-bottom-left{width: 24px;height: 18px;border-left: 1px solid #fff;border-bottom: 1px solid #fff;bottom: 12px;left: 13px;}
+.hover-main{;width: 90px;height: 50px;margin: auto;left: 0;right: 0;top: 0;bottom: 0;text-align: center;}
+.index-project .hover-main .title{font-size: 12px;color: rgba(255,255,255,.8);}
+.index-project .hover-main .description{font-size: 12px;color:rgba(255,255,255,.6);}
+
+@media (min-width:768px){
+	.index-banner{width: 750px;margin-left: auto;margin-right: auto;}
+	.index-project .hover-main{width: 150px;font-size: 14px;top: auto;bottom: 10%;}
+	.index-project .hover-main .title{margin-bottom: 10px;}
+}
+
+@media (min-width:992px){
+	.index-banner{width: 970px;}
+	.index-project .hover-main{bottom: 15%;}
+}
+
+@media (min-width:1200px){
+	.index-banner{height: 160px;width: 1170px}
+	.index-banner .title{font-size: 14px;margin-bottom: 15px;}
+	.banner-icon{margin: 30px auto 25px;}
+	.index-banner .description{display: block;font-size: 12px;text-align: center;}
+
+	.hover-main{;width: 90px;height: 50px;bottom: 10%;}
+	.index-project .hover-main .title{font-size: 16px;margin-bottom: 16px;line-height: 1;}
+	.index-project .hover-main .description{font-size: 14px;}
+}
+
+@media (min-width:1400px){
+	.index-banner{width: 1200px;position: relative;top: -74px;margin: 0 auto;background-color: #ffffff;box-shadow: 0 2px 20px 0 rgba(0,0,0,.2);}
+	.index-banner .description{text-align: center;}
+	.index-banner .title{font-size: 16px;text-align: center;font-weight: bold;margin-bottom: 12px;}
+	.banner-icon{display: block;width: 38px;height: 38px;margin: 30px auto 25px;}
+}
+
+@media (min-width:1600px){
+	
+}

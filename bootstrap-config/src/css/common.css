@@ -1,0 +1,58 @@
+.pos-r{position: relative;}
+.pos-a{position: absolute;}
+
+.nav-bar li a{position: relative;}
+.navbar li a::after{display: none;content: '';position: absolute;bottom: 0;
+left: 17px;right: 17px;background-color: #000;
+height: 2px;}
+.navbar li a:hover::after{content: "";display: block;}
+
+.carousel-caption h3{font-size: 30px;margin-top: 0;line-height: 1;}
+.carousel-caption .title{font-size: 14px;line-height: 1;}
+.carousel-caption{height: 70px;}
+.carousel-indicators{display: none;}
+
+.CommonTitle{margin-top: 20px;}
+.CommoTitle a{text-decoration: none;}
+.CommonTitle .title{display: block;font-size: 18px;font-weight: bold;text-align: center;color: #000;line-height: 1;}
+.CommonTitle .en-title{color: rgba(0,0,0,.4);font-size: 12px;text-align: center;margin-top: 10px;}
+.CommonTitle .nav{display: flex;margin-top: 15px;}
+.CommonTitle .nav a{flex: 1;text-align: center;color: rgba(0,0,0,.6);font-size: 12px;position: relative;}
+.CommonTitle .nav a::before{content: '';width: 1px;height: 9px;background-color: #ccc;display: inline-block;position: absolute;left: 0;margin-top: 3px;}
+.CommonTitle .nav a:first-child::before{display: none;}
+
+@media (min-width:768px){
+	.carousel-caption h3{font-size: 40px;}
+	.carousel-caption .title{font-size: 18px;}
+	.carousel-caption{height: 100px;}
+
+	.CommonTitle .title{font-size: 20px;}
+	.CommonTitle .nav a{font-size: 14px;}
+}
+
+@media (min-width:992px){
+	.carousel-caption h3{font-size: 54px;margin-bottom: 20px;}
+	.carousel-caption .title{font-size: 24px;}
+	.carousel-caption{height: 160px;}
+	.carousel-indicators{display: block;}
+
+	.CommonTitle .title{font-size: 22px;float: left;margin-top: 5px;margin-left: 2px;}
+	.CommonTitle .en-title{float: left;font-size: 16px;margin-left: 15px;margin-top: 12px;}
+	.CommonTitle .nav{margin-top: 0;line-height: 32px;margin-left: 17%;}
+	.CommonTitle .nav a::before{margin-top:  12px;}
+}
+
+@media (min-width:1200px){
+	.carousel-caption h3{font-size: 64px;margin-bottom: 50px;}
+	.carousel-caption .title{font-size: 30px;}
+	.carousel-caption{height: 200px;}
+}
+
+@media (min-width:1400px){
+	.carousel-indicators{display: none;position: relative;top: -74px;margin: 0 auto;}
+	
+}
+
+@media (min-width:1600px){
+	
+}

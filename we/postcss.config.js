@@ -2,7 +2,10 @@ module.exports = {
 	plugins:{
 		'precss':{},
 		'postcss-import':{},
-		'postcss-assets':{},
+		'postcss-assets':{
+			// loadPaths:['**']
+			loadPaths:['public/img']
+		},
 		'postcss-px-to-viewport':{
 			viewportWidth: 640,
 			unitPrecision: 2,

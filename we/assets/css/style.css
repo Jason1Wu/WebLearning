@@ -143,8 +143,10 @@ body,html{background-color: #fdeb01;overflow: hidden;width: 100%;height: 100%;}
 			background: url(../img/mainscene_bg.png) 0 0 no-repeat /cover;
 			.share-btn{
 				background: url(../img/share_btn.png) no-repeat 0 0 /cover;
-				width: 49px;
-				height: 136px;
+				/*width: 49px;
+				height: 136px;*/
+				width: width('share_btn.png');
+				height: height('share_btn.png');
 				position: absolute;
 				top: 40px;
 				right: 36px;
@@ -182,6 +184,94 @@ body,html{background-color: #fdeb01;overflow: hidden;width: 100%;height: 100%;}
 					left: 10px;
 				}
 				.btn-upgradeperson{}
+			}
+		}
+
+		.answer{
+			display: none;
+			background: url(../img/answer_bg.png) 0 0 no-repeat /cover;
+			.answer-box{
+				filter: blur(10px);
+					.title{
+					line-height: 62px;
+					font-size: 30px;
+					color: #000;
+					position: absolute;
+					width: 536px;
+					height: 124px;
+					left: 50px;
+					top: 200px;
+				}
+				.result-options{
+					position: absolute;
+					left: 50px;
+					top: 354px;
+					.opt{
+						margin-bottom: 40px;
+						border-radius: 7px;
+						box-sizing: content-box;
+						padding: 12px 0 0 22px;
+						width: 520px;
+						height: 113px;
+						background-color: #e0ded7;
+						span{font-size: 26px;}
+						.animation-correct{
+							background: url(../img/answer_correct.png) 0 0 no-repeat /cover;
+							width: width('answer_correct.png');
+							height: height('answer_correct.png');
+							position: absolute;
+							right: 25px;
+							top: 18px;
+						}
+					}
+					.current{background-color: white;}
+				}
+				.num-count{
+					position: absolute;
+					top: 962px;
+					left: 0;
+					width: 100%;
+					text-align: center;
+					font-size: 36px;
+					color: #333;
+					span{
+						color: #da464d;
+					} 
+				}
+			}
+			.result-box{
+				width: 100%;
+				height: 100%;
+				background-color: rgba(255,255,255,0.6);
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 2;
+				.result-wp{
+					background: url(../img/answer_success_bg.png) 0 0 no-repeat /cover;
+					width: width('answer_success_bg.png');
+					height: height('answer_success_bg.png');
+					position: absolute;
+					left: 31px;
+					top: 288px;
+					.title{
+						font-size: 75px;
+						color: #ce3e3e;
+						margin-top: 120px;
+						text-align: center;
+						line-height: 71px;
+					}
+	                .result-flag{
+	                	background: url(../img/answer_cat.png) 0 0 no-repeat /cover;
+	                	width: width('answer_cat.png');
+						height: height('answer_cat.png');
+						margin: 0 auto;
+		                }
+	                .result-text{
+	                	text-align: center;
+	                	width: 100%;
+	                }
+				}
 			}
 		}
 	}

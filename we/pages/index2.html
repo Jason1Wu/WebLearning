@@ -40,13 +40,41 @@
                 <div class="person"></div>
                 <div class="desk"></div>
                 <div class="btns">
-                    <div class="btn"></div>
-                    <div class="btn"></div>
-                    <div class="btn"></div>
-                    <div class="btn"></div>
-                    <div class="btn"></div>
+                    <div class="btn move"></div>
+                    <div class="btn move"></div>
+                    <div class="btn move"></div>
+                    <div class="btn move"></div>
+                    <div class="btn move"></div>
                     <div class="btn-upgradeperson"></div>
                 </div>
+            </li>
+
+            <li class="answer">
+                <div class="answer-box">
+                    <div class="title">11111111111111111111111</div>
+                    <div class="result-options">
+                        <div class="opt current">
+                            <span>A:选项A</span>
+                            <div class="animation-correct"></div>
+                        </div>
+                        <div class="opt">
+                            <span>A:选项A</span>
+                        </div>
+                        <div class="opt">
+                            <span>A:选项A</span>
+                        </div>
+                    </div>
+                    <div class="num-count"><span>1</span>/3</div>
+                </div>
+
+                <div class="result-box">
+                    <div class="result-wp">
+                        <div class="title">解锁成功</div>
+                        <div class="result-flag"></div>
+                        <div class="result-text">获得猫咪</div>
+                    </div>
+                </div>
+                
             </li>
         </ul>
     </div>
@@ -83,8 +111,11 @@
     	}
     }
 
-    $('.choose').on('click','.move',function(){
-        $(this).closest('li').siblings().hide().end().next().show().end().closest('.item-wrap').css({'transform': 'translateY(' + -$(window).height()+'px)'});
+    $('.choose,.main').on('click','.move',function(){
+        var $t = $(this);
+        var $li = $(this).closest('li');
+        var index = $li.index();
+        $li.next().show().closest('.item-wrap').css({'transform': 'translateY(' + -$(window).height()*index+'px)'});
     });
 
 </script>

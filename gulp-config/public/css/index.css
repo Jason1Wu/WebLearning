@@ -1,0 +1,389 @@
+html,body,div,span,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,a,address,em,img,ol,ul,li,fieldset,form,label,legend,table,tbody,tfoot,thead,tr,th,td,i,b,s{margin:0;padding:0;border:0;font-family:Helvetica,Arial}
+ul,ol{list-style:none}
+body,html{background-color: #fff;overflow: hidden;width: 100%;height: 100%;}
+.am_css{transition:all 0.3s ease-in-out; -webkit-transition:all 0.3s ease-in-out;}
+.aligncenter{text-align:center;}
+.loading{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #f3f2ee;
+}
+.loading .loading-text-wrap{
+		background: url(../img/loading_bg.png?v=d241dcf696) no-repeat 0 0 / cover;
+		width: 100%;
+		height: 70.625vw;
+		position: absolute;
+		top: 40.156vw;
+		left:0;
+	}
+.loading .loading-text-wrap .text{
+			position: absolute;
+			top: 52.656vw;
+			left:0;
+			text-align: center;
+			width: 100%;
+		}
+.loading .loading-text-wrap .percent{
+			position: absolute;
+			top: 60.625vw;
+			left: 0;
+			text-align: center;
+			width: 100%;
+		}
+.loading .cloud{
+		background: url(../img/loading_cloud.png?v=8839c92b88);
+		background-position: 0% center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 309.375vw;
+		height: 75vw;
+		position: absolute;
+		top: 88.906vw;
+		left: 0;
+		/*transition:all 10s ease-in-out;transform:translateX(-100px);*/
+	}
+.loading .cp{
+		position: absolute;
+		bottom: 4.219vw;
+		left: 0;
+		text-align: center;
+		width: 100%;
+	}
+@keyframes coverTextAnimation{
+				0%{height: 0px}
+				10%{height: 1.563vw}
+				20%{height: 7.813vw}
+				30%{height: 31.25vw}
+				100%{height: 99.688vw}
+			}
+@keyframes personAnimation{
+	100%{background-position: -89.219vw  0}
+}
+.item-wrap{
+	position: absolute;left: 0;top: 0;width: 100%;height: 100%;
+}
+.item-wrap ul{
+		position: absolute;left: 0;top: 0;width: 100%;height: 100%;
+		transition:all  ease-in-out 0.5s;
+	}
+.item-wrap ul li{
+			position: relative;width: 100%;height: 100%;
+		}
+.item-wrap ul .cover{
+			display: none;
+			background:url(../img/cover_bg.png?v=190145f4bc) no-repeat 0 0 /cover;
+
+		}
+.item-wrap ul .cover .cover-text{
+				background-image: url(../img/cover_text.png?v=ff7e0810bc);
+				background-position: 0 0 ;
+				background-repeat: no-repeat;
+				background-size: cover;
+				width: 55.625vw;
+				height: 99.688vw;
+				position: absolute;
+				left: 21.563vw;
+				top: 59.688vw;
+			}
+.item-wrap ul .cover .cover-text-am{
+				animation: coverTextAnimation 8s linear both;
+			}
+.item-wrap ul .choose{
+			display: none;
+			background:url(../img/choose_bg.png?v=c0b0f4f5bf) no-repeat 0 0 /cover;
+		}
+.item-wrap ul .choose .choose-text{
+				position: absolute;
+				left:8.438vw;
+				top: 42.188vw;
+				text-align: left;
+				width: 83.125vw;
+				height: 30.938vw;
+				line-height: 7.813vw;
+				font-size: 5.625vw;
+				color: #333;
+			}
+.item-wrap ul .choose .btn{
+					position: absolute;
+					left: 8.438vw;
+					top: 72.969vw;
+					width: 83.125vw;
+				}
+.item-wrap ul .choose .btn .btn-boy,.item-wrap ul .choose .btn .btn-girl{
+						position: absolute;
+						left:7.5vw;
+						top: 0;
+						width: 22.5vw;
+						height: 46.406vw;
+						background: url(../img/choose_boy.png?v=7391412ff4) no-repeat 0 0 /cover;
+
+					}
+.item-wrap ul .choose .btn .btn-girl{
+						left:50.938vw;
+						background: url(../img/choose_girl.png?v=456049a5c3) no-repeat 0 0 /cover;
+					}
+/*<div class="share-btn"></div>
+                 <div class="person"></div>
+                 <div class="desk"></div>
+                 <div class="floor"></div>
+                 <div class="btns"></div>*/
+.item-wrap ul .main{
+			display: none;
+			background: #f3f2ee;
+				background: url(../img/mainscene_bg.png?v=0275158b09) no-repeat 0 0 / cover;
+		}
+.item-wrap ul .main .share-btn{
+				background: url(../img/share_btn.png?v=d6e77e02e3) no-repeat 0 0 / cover;
+				width: 7.656vw;
+				height: 21.25vw;
+				position: absolute;
+				top: 6.25vw;
+				right: 5.625vw;
+				/*@include movieclip(share_btn,png,36,40,maintop);*/
+			}
+.item-wrap ul .main .person{
+				background: url(../img/ms_taijian.png?v=5dfbf5a1cd) no-repeat 0 0 / cover;
+				width: 44.531vw;
+				height: 84.688vw;
+				position: absolute;
+				right: 29.063vw;
+				bottom: 40.781vw;
+				/*@include movieclip(ms_taijian,png,186,261,main);*/
+				animation: personAnimation 1s steps(2,end) infinite;
+			}
+.item-wrap ul .main .desk{
+				background: url(../img/mainscene_table.png?v=02b814ee42) no-repeat 0 0 / cover;
+				width: 94.219vw;
+				height: 35.625vw;
+				position: absolute;
+				right:5.469vw;
+				bottom: 40.781vw;
+			}
+/*.floor{
+				background: url(../img/mainscene_bg.png?v=0275158b09) no-repeat 0 0 / cover;
+				width: 640px;
+				height: 1136px;
+				position: absolute;
+				right:0;
+				bottom: 0;
+				z-index: -1;
+			}*/
+.item-wrap ul .main .btns{
+				background: #292929;
+				position: absolute;
+				bottom: 0;
+				right:0;
+				height: 22.031vw;
+				width: 100%;
+			}
+.item-wrap ul .main .btns .btn{
+					background:url(../img/mainscene_zhong.png?v=86eae17a7a) no-repeat 0 0 /cover;
+					width:14.063vw;
+					height: 22.031vw;
+					position: absolute;
+					left:1.563vw;
+				}
+.item-wrap ul .main .btns .btn-upgradeperson{
+	background: url(../img/mainscene_upgrade.png?v=db67813b38) no-repeat 0 0 /cover;
+	width: 28.75vw;
+	height: 34.688vw;
+	position: absolute;
+	left: 69.844vw;
+		bottom: 0px}
+.item-wrap ul .answer{
+			display: none;
+			background-color: #f3f2ee;
+
+
+		}
+/*<div class="title"></div>
+							<div class="result-options">
+								<div class="opt">
+									<span>A:选项a</span>
+									<div class="animation-correct"></div>
+								</div>
+
+							</div>
+							<div class="num-count"></div>*/
+.item-wrap ul .answer .answer-box .bg-s{
+					background: url(../img/answer_bg.jpg?v=8b139ca345) no-repeat 0 0 /cover;
+					width: 37.813vw;
+					height: 27.813vw;
+					position: absolute;
+					left: 0;
+					bottom: 0;
+				}
+/*filter: blur(10px);*/
+.item-wrap ul .answer .answer-box .title{
+					font-size: 4.688vw;
+					color: #000;
+					position: absolute;
+					width: 83.75vw;
+					height: 19.375vw;
+					left:7.813vw;
+					top:23.438vw;
+					line-height: 9.688vw;
+				}
+.item-wrap ul .answer .answer-box .result-options{
+					position: absolute;
+					left:7.813vw;
+					top: 55.313vw;
+				}
+.item-wrap ul .answer .answer-box .result-options .opt{
+						margin-bottom: 6.25vw;
+						border-radius: 1.094vw;
+						padding: 1.875vw 0 0 3.438vw;
+						width: 81.25vw;
+						height: 17.656vw;
+						background: #e0ded7;
+						position: relative;
+						box-sizing: content-box;
+					}
+.item-wrap ul .answer .answer-box .result-options .opt span{
+							font-size: 4.063vw;
+						}
+.item-wrap ul .answer .answer-box .result-options .opt .animation-correct{
+	background: url(../img/answer_correct.png?v=511864af19) no-repeat 0 0 /cover;
+	width: 12.188vw;
+	height: 10.938vw;
+	position: absolute;
+	left: 68.438vw;
+		bottom: 2.813vw;
+							display: none;
+						}
+.item-wrap ul .answer .answer-box .result-options .opt .animation-wrong{
+	background: url(../img/answer_wrong.png?v=7fe9164255) no-repeat 0 0 /cover;
+	width: 12.188vw;
+	height: 10.938vw;
+	position: absolute;
+	left: 68.438vw;
+		bottom: 2.813vw;
+							display: none;
+						}
+.item-wrap ul .answer .answer-box .result-options .current{background-color: #fff}
+.item-wrap ul .answer .answer-box .num-count{
+					position: absolute;
+					top: 150.313vw;
+					left: 0;
+					width: 100%;
+					text-align: center;
+					color: #333;
+					font-size: 5.625vw;
+				}
+.item-wrap ul .answer .answer-box .num-count span{
+						color: #da464d;
+
+					}
+/*<div class="result-wp">
+				<div class="title"></div>
+				<div class="result-flag"></div>
+				<div class="result-text"></div>
+			</div>*/
+.item-wrap ul .answer .result-box.tips_failed .result-wp{
+	background:url(../img/answer_failed_bg.png?v=0e9c1289ae) no-repeat 0 0 /cover;
+	width:88.438vw;
+	height:89.219vw;
+	position:absolute;
+	top:45vw;
+	left:4.844vw;
+			}
+.item-wrap ul .answer .result-box.tips_failed .result-wp .result-text{
+					margin-top: 25.781vw;
+				}
+.item-wrap ul .answer .result-box{
+				display: none;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(255,255,255,0.6);
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 2;
+			}
+.item-wrap ul .answer .result-box .result-wp{
+					/*background: url(../img/answer_success_bg.png?v=25dac38e85) no-repeat 0 0 /cover;
+					width:width('../img/answer_success_bg.png?v=25dac38e85');
+					height: height('../img/answer_success_bg.png?v=25dac38e85');
+					position: absolute;
+					left: 31px;
+					top: 288px;*/
+	background:url(../img/answer_success_bg.png?v=25dac38e85) no-repeat 0 0 /cover;
+	width:88.75vw;
+	height:88.75vw;
+	position:absolute;
+	top:45vw;
+	left:4.844vw;
+				}
+.item-wrap ul .answer .result-box .result-wp .title{
+						font-size: 11.719vw;
+						color: #ce3e3e;
+						margin-top: 18.125vw;
+						text-align: center;
+						line-height: 11.094vw;
+					}
+.item-wrap ul .answer .result-box .result-wp .result-flag{
+						background: url(../img/answer_cat.png?v=64eb0e7c62) no-repeat 0 0/cover;
+						width:42.344vw;
+						height: 44.688vw;
+						margin: 0 auto;
+					}
+.item-wrap ul .answer .result-box .result-wp .result-text{
+						text-align: center;
+						width: 100%;
+
+					}
+/*<div class="result-renwu-box">
+                    <div class="result-wp">
+                        <div class="title">解锁成功</div>
+                        <div class="result-text">获得xxx</div>
+                        <div class="result-flag"></div>
+                    </div>
+                </div>*/
+.item-wrap ul .answer .result-renwu-box{
+				display: none;
+				position: absolute;
+				top: 0;
+				left:0;
+				width: 100%;
+				height: 100%;
+				background-color: #f2f1ec;
+				z-index: 2;
+			}
+.item-wrap ul .answer .result-renwu-box .result-wp{
+	background: url(../img/pop_renwu_bg.png?v=c39ed58f75) no-repeat 0 0 /cover;
+	width: 100vw;
+	height: 157.656vw;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+				}
+.item-wrap ul .answer .result-renwu-box .result-wp .title{
+						color: #ce3e3e;
+						font-size: 11.719vw;
+						position: absolute;
+						top: 52.969vw;
+						text-align: center;
+						width: 100%;
+					}
+.item-wrap ul .answer .result-renwu-box .result-wp .result-text{
+						color: #333;
+						font-size: 3.75vw;
+						position: absolute;
+						top: 70.625vw;
+						text-align:center;
+						width: 100%;
+					}
+.item-wrap ul .answer .result-renwu-box .result-wp .result-flag{
+	background: url(../img/upgrade_btn.png?v=0d3b547f5f) no-repeat 0 0 /cover;
+	width: 38.281vw;
+	height: 15.156vw;
+	position: absolute;
+	left: 30.312vw;
+	top: 84.219vw;
+						color:#fff;
+						font-size: 9.375vw;
+						text-align: center;
+					}

@@ -34,7 +34,7 @@
     .col((@index + 1), @item);
   }
   .col(@index, @list) when (@index =< @grid-columns) { // general; "=<" isn't a typo
-    @item: ~".@{name}-@{value} .col-xs-@{index},.@{name}-@{value} .col-sm-@{index},.@{name}-@{value} .col-md-@{index}, .@{name}-@{value} .col-lg-@{index},.@{name}-@{value} .col-xl-.@{index},.@{name}-@{value} .col-xx-@{index}";
+    @item: ~".@{name}-@{value} .col-xs-@{index},.@{name}-@{value} .col-sm-@{index},.@{name}-@{value} .col-md-@{index}, .@{name}-@{value} .col-lg-@{index},.@{name}-@{value} .col-xl-@{index},.@{name}-@{value} .col-xx-@{index}";
     .col((@index + 1), ~"@{list}, @{item}");
   }
   .col(@index, @list) when (@index > @grid-columns) { // terminal

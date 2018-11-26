@@ -19,15 +19,61 @@
 .index-project .hover-main .title{font-size: 12px;color: rgba(255,255,255,.8);}
 .index-project .hover-main .description{font-size: 12px;color:rgba(255,255,255,.6);}
 
+.index-specialty{margin-top: 70px;position: relative;}
+.index-specialty .item{padding-left: 10px;padding-right: 10px;margin-bottom: 20px;}
+.index-specialty .cover{position: relative;padding: 18px;}
+.index-specialty .focus-bg{position: absolute;width: 50px;height: 50px;margin: auto;left: 0;right: 0;bottom: 0;top: 0;background-color: #000;opacity: .3;}
+.index-specialty .focus{position: absolute;width: 50px;line-height: 50px;height: 50px;margin: auto;left: 0;right: 0;bottom: 0;top: 0;font-size: 35px;color: #fff;text-align: center;}
+.index-specialty .cover-border{position: absolute;left: 0;top: 0;bottom: 12%;right: 0;border: 1px solid #ccc;}
+.index-specialty .item:nth-child(odd) .cover-border{top: 0;bottom: 12%;}
+.index-specialty .item:nth-child(even) .cover-border{bottom: 0;top: 12%;}
+.index-specialty .text{height: 100px;position: absolute;top: 0;left: 0;right: 0;}
+.index-specialty .item:nth-child(even) .text{position: absolute;top: 0;left: 10px;right: 10px;}
+.index-specialty .item:nth-child(even) .cover{margin-top: 10px;}
+.specialty-button{text-align: center;}
+.specialty-button a{display: inline-block;width: 40px;height: 40px;background-color: #b2b2b2;color: #fff;font-size: 24px;line-height: 40px;text-decoration: none;}
+
+.index-plan a{color: inherit;text-decoration: none;display: block;}
+.index-plan a:hover{color: inherit;}
+.index-plan .plan-item-left{padding: 20px;position: relative;}
+.plan-item-left img{width: 65%;float: right;}
+.plan-item-left .item-info{right: 45%;left: 20px;bottom: 0;position: absolute;}
+.plan-item-left .title{font-size: 16px;font-weight: bold;line-height: 1;}
+.plan-item-left .line{width: 74px;border-top: 1px solid #b2b2b2;margin-top: 15px;margin-bottom: 10px;}
+.plan-item-left .text{font-size: 12px;color: #b2b2b2;line-height: 1.6;}
+.index-plan .plan-right-top{padding: 20px;}
+.plan-right-top img{float: right;width: 30%;}
+.plan-right-top .plan-right-info{width: 40%;float: left;margin-top: 20px;width: 65%;}
+.plan-right-info .title{font-size: 16px;line-height: 1;font-weight: bold;color: rgba(0,0,0,.8);margin-bottom: 15px;}
+.plan-right-info .desc{color: #b2b2b2;line-height: 1.6;font-size: 12px;}
+.index-plan .plan-right-bottom{padding: 20px;position: relative;}
+.plan-right-bottom img{width: 100%;}
+.plan-right-bottom .plan-right-info{margin-top: 20px;width: 35%;position: absolute;top: 10%;right: 10%;}
+
 @media (min-width:768px){
 	.index-banner{width: 750px;margin-left: auto;margin-right: auto;}
 	.index-project .hover-main{width: 150px;font-size: 14px;top: auto;bottom: 10%;}
 	.index-project .hover-main .title{margin-bottom: 10px;}
+
+	.plan-item-left .item-info{right: 40%;height: 90px;}
+	.plan-right-top .plan-right-info{margin-top: 70px;}
+	.plan-right-top img{float: right;width: 40%;}
+	.plan-right-bottom .plan-right-info{margin-top: 100px;}
 }
 
 @media (min-width:992px){
 	.index-banner{width: 970px;}
 	.index-project .hover-main{bottom: 15%;}
+
+	.index-plan .plan-item-left{padding: 0;padding-bottom: 50px;}
+	.index-plan .plan-item-left .item-info{right: 30%;}
+	.index-plan .plan-right-top{padding: 0;margin-bottom: 45px;}
+	.plan-right-top img{width: 40%;margin-right: 30px;}
+	.plan-right-info{padding-left: 15px;border-left: 1px solid #b2b2b2;}
+	.index-plan .plan-right-bottom{padding: 0;}
+	.index-plan .plan-right-top .plan-right-info{margin-left: 30px;width: 200px;margin-top: 50px;}
+	.plan-right-bottom .plan-right-info{right: 15%;}
+	.plan-item-left img{width: 70%;}
 }
 
 @media (min-width:1200px){
@@ -39,6 +85,13 @@
 	.hover-main{;width: 90px;height: 50px;bottom: 10%;}
 	.index-project .hover-main .title{font-size: 16px;margin-bottom: 16px;line-height: 1;}
 	.index-project .hover-main .description{font-size: 14px;}
+
+	.index-specialty{margin-top: 70px;position: relative;display: flex;}
+	.specialty-list{flex: 1;}
+	.specialty-button{width: 40px;margin: auto;}
+	.specialty-button a{margin-top: 5px;}
+
+	
 }
 
 @media (min-width:1400px){
@@ -46,6 +99,8 @@
 	.index-banner .description{text-align: center;}
 	.index-banner .title{font-size: 16px;text-align: center;font-weight: bold;margin-bottom: 12px;}
 	.banner-icon{display: block;width: 38px;height: 38px;margin: 30px auto 25px;}
+
+	.plan-right-top img{width: 40%;margin-right: 156px;}
 }
 
 @media (min-width:1600px){

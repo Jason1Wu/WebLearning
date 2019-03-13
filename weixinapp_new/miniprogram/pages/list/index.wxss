@@ -19,20 +19,3 @@ scroll-view{
   border-bottom: 6rpx solid #1e74db;
   font-weight: bold;
 }
-input{
-  background: #f8f8f8;
-  border: 1rpx solid #e7e7e7;
-  margin: 22rpx 28rpx;
-  border-radius: 2rpx;
-  padding-left: 10rpx; 
-  box-sizing: border-box;
-}
-
-swiper{
-  margin: 0 25rpx;
-  width: 700rpx;
-}
-
-swiper image{
-  width: 700rpx;
-}

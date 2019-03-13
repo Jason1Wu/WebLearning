@@ -4,19 +4,3 @@
   <view wx:else class='scroll-view-item' bindtap="changeItem" data-id="{{item.id}}"> {{item.categoryName}} </view>
 </block>
 </scroll-view>
-<input placeholder="Search"></input>
-
-<component-tag-swiper img-urls="{{imgUrls}}"></component-tag-swiper>
-
-<!-- <swiper
-  indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}"
-  interval="{{interval}}"
-  duration="{{duration}}"
->
-  <block wx:for="{{imgUrls}}">
-    <swiper-item>
-      <image src="{{item}}" class="slide-image" width="355" height="150"/>
-    </swiper-item>
-  </block>
-</swiper> -->

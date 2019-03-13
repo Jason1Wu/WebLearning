@@ -1,10 +1,10 @@
-const app=getApp();
+const app = getApp();
 Page({
   data: {
     toView: 'red',
     scrollTop: 100,
     nav: [
-      { id: 1, categoryName: '要闻'},
+      { id: 1, categoryName: '要闻' },
       { id: 2, categoryName: '政治' },
       { id: 3, categoryName: '经济' },
       { id: 4, categoryName: '体育' },
@@ -13,17 +13,8 @@ Page({
       { id: 7, categoryName: '科技' },
       { id: 8, categoryName: '历史' },
       { id: 9, categoryName: '汽车' },
-      { id: 10,categoryName: '直播' },
+      { id: 10, categoryName: '直播' },
     ],
-    imgUrls: [
-      'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-      'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
-      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
-    ],
-    indicatorDots: true,
-    autoplay: true,
-    interval: 5000,
-    duration: 1000
   },
 
   upper: function (e) {
@@ -45,7 +36,7 @@ Page({
    */
   onLoad: function (options) {
     var categoryId = options.categoryId;
-    this.setData({categoryId});
+    this.setData({ categoryId });
   },
 
   /**
@@ -58,9 +49,6 @@ Page({
   changeItem: function (event) {
     console.log(event);
     var id = event.target.dataset.id;
-    wx.navigateTo({
-      url: `/pages/list/index?categoryId=${id}`
-    })
   },
 
   /**
@@ -103,7 +91,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  
+  }
 })

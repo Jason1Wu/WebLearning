@@ -15,6 +15,8 @@ Page({
       { id: 9, categoryName: '汽车' },
       { id: 10,categoryName: '直播' },
     ],
+    list:[],
+    pages: 1,
     imgUrls: [
       'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
       'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
@@ -52,7 +54,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.onQuery(1);
   },
 
   changeItem: function (event) {
@@ -95,7 +97,8 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    let pages = this.data.pages+1;
+    this.onQuery(pages);
   },
 
   /**
@@ -105,5 +108,35 @@ Page({
 
   },
 
-  
+  showDetails: function(){
+    wx.navigateTo({
+      url: '/pages/details/index',
+    })
+  },
+
+  onQuery: function (pages) {
+    var pages = pages||1;
+    const db = wx.cloud.database()
+    // 查询当前用户所有的 counters
+    db.collection('news').where({ //此处根据名字'news'绑定数据库集合
+      _openid: this.data.openid
+    }).skip((pages-1)*10).limit(10).get({ //skip limt进行分页操作
+      success: res => {
+        // this.setData({
+        //   queryResult: JSON.stringify(res.data, null, 2)
+        // })
+        this.setData({
+          list:this.data.list.concat(res.data)
+        })
+        console.log('[数据库] [查询记录] 成功: ', res)
+      },
+      fail: err => {
+        wx.showToast({
+          icon: 'none',
+          title: '查询记录失败'
+        })
+        console.error('[数据库] [查询记录] 失败：', err)
+      }
+    })
+  },
 })

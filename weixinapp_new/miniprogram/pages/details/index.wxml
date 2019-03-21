@@ -1,0 +1,8 @@
+<view class='title'></view>
+<view class='info'>
+  <view class='logo'></view>
+  <view class='author'></view>
+  <view class='time'></view>
+</view>
+<view class='image'></view>
+<view class='details'></view>

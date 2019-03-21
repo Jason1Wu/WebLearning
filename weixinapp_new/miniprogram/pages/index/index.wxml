@@ -8,15 +8,14 @@
 
 <component-tag-swiper img-urls="{{imgUrls}}"></component-tag-swiper>
 
-<!-- <swiper
-  indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}"
-  interval="{{interval}}"
-  duration="{{duration}}"
->
-  <block wx:for="{{imgUrls}}">
-    <swiper-item>
-      <image src="{{item}}" class="slide-image" width="355" height="150"/>
-    </swiper-item>
-  </block>
-</swiper> -->
+<!--用wx:for-item来验证从数据库数据绑定成功-->
+<view class='list-box' wx:for="{{list}}" wx:for-item="Item">
+  <view class='list' bindtap='showDetails'>
+    <view class='info'>
+    <!--用Item.title来验证从数据库数据绑定成功-->
+      <view class='title'>{{Item.title}}</view>
+      <view class='text'>{{Item.author}} 阅读量：{{Item.count}}</view>
+    </view>
+    <view class='cover'><image src='{{Item.cover}}'></image></view>
+  </view>
+</view>

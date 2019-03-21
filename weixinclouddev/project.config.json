@@ -9,7 +9,7 @@
 		"newFeature": true
 	},
 	"appid": "wxc1ba76a20bff03e3",
-	"projectname": "weixinapp_new",
+	"projectname": "weixinclouddev",
 	"libVersion": "2.3.0",
 	"condition": {
 		"search": {
@@ -28,25 +28,12 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 0,
 			"list": [
 				{
 					"id": -1,
 					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide",
-					"query": ""
-				},
-				{
-					"id": 1,
-					"name": "带页面Id",
-					"pathName": "pages/index/index",
-					"query": "categoryId=1"
-				},
-				{
-					"id": 2,
-					"name": "带分类id",
-					"pathName": "pages/index/index",
-					"query": "categoryId=1"
+					"pathName": "pages/databaseGuide/databaseGuide"
 				}
 			]
 		}

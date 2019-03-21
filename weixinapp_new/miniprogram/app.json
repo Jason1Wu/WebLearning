@@ -1,8 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/list/index"
+    "pages/list/index",
+    "pages/details/index",
+    "pages/my/my"
   ],
   "window": {
     "navigationBarTitleText": "Demo"
@@ -18,7 +19,7 @@
         "selectedIconPath": "images/newsHighLight.png"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/my/my",
         "text": "我的",
         "iconPath": "images/my.png",
         "selectedIconPath": "images/myHignLight.png"

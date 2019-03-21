@@ -36,3 +36,37 @@ swiper{
 swiper image{
   width: 700rpx;
 }
+
+.list-box{
+  padding: 0 25rpx;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.list{
+  display: flex;
+  padding: 20rpx 0;
+  margin: 20rpx 0;
+  border-top: 1rpx solid #e9e9e9;
+}
+
+.info{
+  position: relative;
+  padding: 5rpx 0;
+}
+
+.title{
+  font-size: 43rpx;
+}
+
+.text{
+  font-size: 32rpx;
+  position: absolute;
+  left: 0;
+  bottom: 10rpx;
+}
+
+.cover image{
+  width: 223rpx;
+  height: 155rpx;
+}

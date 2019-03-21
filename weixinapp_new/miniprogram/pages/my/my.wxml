@@ -1,0 +1,13 @@
+<view class='cover'>
+  <image class='cover-bg' src='https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640'></image>
+  <view class='info'>
+    <view class='avatar'>
+      <image src='https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'></image>
+    </view>
+    <view class='nickname'>五子棋</view>
+  </view>
+</view>
+
+<view class='my-list'>
+  <view class='item'>我的收藏</view>
+</view>

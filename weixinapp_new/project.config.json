@@ -11,6 +11,7 @@
 	"appid": "wxc1ba76a20bff03e3",
 	"projectname": "weixinapp_new",
 	"libVersion": "2.3.0",
+	"compileType": "miniprogram",
 	"condition": {
 		"search": {
 			"current": -1,

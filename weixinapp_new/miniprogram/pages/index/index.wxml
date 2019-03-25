@@ -1,21 +1,23 @@
 <scroll-view scroll-x bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
 <block wx:for="{{nav}}">
-  <view wx:if="{{categoryId==item.id}}" class='scroll-view-item current' bindtap="changeItem" data-id="{{item.id}}"> {{item.categoryName}} </view>
-  <view wx:else class='scroll-view-item' bindtap="changeItem" data-id="{{item.id}}"> {{item.categoryName}} </view>
+  <view class="scroll-view-item {{(currentIndex==index)? 'current' : ''}}" bindtap="changeItem" data-index='{{index}}' data-id="{{item.id}}"> {{item.categoryName}} </view>
 </block>
 </scroll-view>
 <input placeholder="Search"></input>
 
-<component-tag-swiper img-urls="{{imgUrls}}"></component-tag-swiper>
-
-<!--用wx:for-item来验证从数据库数据绑定成功-->
-<view class='list-box' wx:for="{{list}}" wx:for-item="Item">
-  <view class='list' bindtap='showDetails'>
-    <view class='info'>
-    <!--用Item.title来验证从数据库数据绑定成功-->
-      <view class='title'>{{Item.title}}</view>
-      <view class='text'>{{Item.author}} 阅读量：{{Item.count}}</view>
+<swiper style='height:{{windowHeight-180*windowWidth/750}}px;' bindchange='swiperChange' current='{{currentIndex}}'><!--计算高度使其自适应屏幕 -->
+  <swiper-item wx:for="{{nav}}">  <!--给内容部分加上滑动切页效果 -->
+    <component-tag-swiper img-urls="{{imgUrls}}"></component-tag-swiper>
+    <!--用wx:for-item来验证从数据库数据绑定成功-->
+    <view class='list-box' wx:for="{{nav[currentIndex].list}}" wx:for-item="Item">
+      <view class='list' bindtap='showDetails'>
+        <view class='info'>
+        <!--用Item.title来验证从数据库数据绑定成功-->
+          <view class='title'>{{Item.title}}</view>
+          <view class='text'>{{Item.author}} 阅读量：{{Item.count}}</view>
+        </view>
+        <view class='cover'><image src='{{Item.cover}}'></image></view>
+      </view>
     </view>
-    <view class='cover'><image src='{{Item.cover}}'></image></view>
-  </view>
-</view>
+  </swiper-item>
+</swiper>

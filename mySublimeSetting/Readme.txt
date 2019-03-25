@@ -1,0 +1,1 @@
+open Sublime -> Preferences -> Browse Packages -> back to Sublime Text 3 directory -> copy these two floders to there

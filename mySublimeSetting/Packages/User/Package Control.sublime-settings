@@ -1,0 +1,34 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"1337 Color Scheme",
+		"1Self",
+		"3024 Color Scheme",
+		"Alignment",
+		"auto-save",
+		"AutoFileName",
+		"Autoprefixer",
+		"Babel",
+		"BracketHighlighter",
+		"CodeIgniter Utilities",
+		"ColorPicker",
+		"CSS Format",
+		"Emmet Css Snippets",
+		"EmmetOneLine",
+		"JavaScriptNext - ES6 Syntax",
+		"JSCS-Formatter",
+		"JsFormat",
+		"LESS",
+		"Less2Css",
+		"MarkdownEditing",
+		"MarkdownPreview",
+		"Package Control",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"View In Browser"
+	]
+}

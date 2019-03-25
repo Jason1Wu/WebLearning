@@ -1,0 +1,9 @@
+[
+	{ "keys": ["ctrl+alt+f"], "command": "open_in_browser" },
+	
+	{ "keys": ["F2"], "command": "open_in_browser" },
+
+	{ "keys": ["alt+1"], "command": "toggle_comment", "args": { "block": false } },
+	
+{ "keys": ["alt+2"], "command": "toggle_comment", "args": { "block": true } },
+]

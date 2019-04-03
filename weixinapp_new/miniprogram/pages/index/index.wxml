@@ -1,23 +1,25 @@
 <scroll-view scroll-x bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-<block wx:for="{{nav}}">
-  <view class="scroll-view-item {{(currentIndex==index)? 'current' : ''}}" bindtap="changeItem" data-index='{{index}}' data-id="{{item.id}}"> {{item.categoryName}} </view>
+<block wx:for="{{category}}">
+  <view class="scroll-view-item {{(currentIndex==index)? 'current' : ''}}" bindtap="changeItem" data-index='{{index}}' data-id="{{item.id}}"> {{item.name}} </view>
 </block>
 </scroll-view>
 <input placeholder="Search"></input>
 
 <swiper style='height:{{windowHeight-180*windowWidth/750}}px;' bindchange='swiperChange' current='{{currentIndex}}'><!--计算高度使其自适应屏幕 -->
-  <swiper-item wx:for="{{nav}}">  <!--给内容部分加上滑动切页效果 -->
+  <swiper-item wx:for="{{category}}">  <!--给内容部分加上滑动切页效果 -->
     <component-tag-swiper img-urls="{{imgUrls}}"></component-tag-swiper>
-    <!--用wx:for-item来验证从数据库数据绑定成功-->
-    <view class='list-box' wx:for="{{nav[currentIndex].list}}" wx:for-item="Item">
-      <view class='list' bindtap='showDetails'>
-        <view class='info'>
-        <!--用Item.title来验证从数据库数据绑定成功-->
-          <view class='title'>{{Item.title}}</view>
-          <view class='text'>{{Item.author}} 阅读量：{{Item.count}}</view>
+    <scroll-view style='height:{{windowHeight-180*windowWidth/750}}px;' class='scroll-view-list'scroll-y bindscrolltolower='bindscrolltolower'> <!--纵向scroll-view用于下拉页面时再次向后台请求数据 -->
+      <!--用wx:for-item来验证从数据库数据绑定成功-->
+      <view class='list-box' wx:for="{{category[currentIndex].list}}" wx:for-item="Item">
+        <view class='list' bindtap='showDetails'>
+          <view class='info'>
+          <!--用Item.title来验证从数据库数据绑定成功-->
+            <view class='title'>{{Item.title}}</view>
+            <view class='text'>{{Item.author}} 阅读量：{{Item.count}}</view>
+          </view>
+          <view class='cover'><image src='{{Item.cover}}'></image></view>
         </view>
-        <view class='cover'><image src='{{Item.cover}}'></image></view>
       </view>
-    </view>
+    </scroll-view>
   </swiper-item>
 </swiper>

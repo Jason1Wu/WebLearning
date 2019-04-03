@@ -37,6 +37,11 @@ swiper image{
   width: 700rpx;
 }
 
+/* scroll-view有white-space默认值，有时候会影响布局，这里重写样式将默认值覆盖 */
+scroll-view.scroll-view-list{
+ white-space: normal;
+}
+
 .list-box{
   padding: 0 25rpx;
   box-sizing: border-box;

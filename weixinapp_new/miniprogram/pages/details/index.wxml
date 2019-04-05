@@ -1,8 +1,8 @@
-<view class='title'></view>
+<view class='title'>{{details.title}}</view>
 <view class='info'>
-  <view class='logo'></view>
-  <view class='author'></view>
-  <view class='time'></view>
+  <view class='logo'>{{details.authorAvatar}}</view>
+  <view class='author'>{{details.author}}</view>
+  <view class='time'>{{details.createtime}}</view>
 </view>
-<view class='image'></view>
-<view class='details'></view>
+<view class='image'><image src='{{details.cover_bg}}'></image></view>
+<view class='details'>{{details.content}}</view>

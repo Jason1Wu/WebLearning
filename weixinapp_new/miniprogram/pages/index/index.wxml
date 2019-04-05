@@ -3,21 +3,25 @@
   <view class="scroll-view-item {{(currentIndex==index)? 'current' : ''}}" bindtap="changeItem" data-index='{{index}}' data-id="{{item.id}}"> {{item.name}} </view>
 </block>
 </scroll-view>
-<input placeholder="Search"></input>
 
-<swiper style='height:{{windowHeight-180*windowWidth/750}}px;' bindchange='swiperChange' current='{{currentIndex}}'><!--计算高度使其自适应屏幕 -->
+
+<swiper style='height:{{windowHeight-84*windowWidth/750}}px;' bindchange='swiperChange' current='{{currentIndex}}'><!--计算高度使其自适应屏幕 -->
   <swiper-item wx:for="{{category}}">  <!--给内容部分加上滑动切页效果 -->
-    <component-tag-swiper img-urls="{{imgUrls}}"></component-tag-swiper>
-    <scroll-view style='height:{{windowHeight-180*windowWidth/750}}px;' class='scroll-view-list'scroll-y bindscrolltolower='bindscrolltolower'> <!--纵向scroll-view用于下拉页面时再次向后台请求数据 -->
+    <input hidden='{{hideTop[currentIndex]}}' placeholder="Search"></input>
+    <view hidden='{{hideTop[currentIndex]}}'>
+      <component-tag-swiper img-urls="{{imgUrls}}"></component-tag-swiper>
+    </view>
+    <scroll-view style='height:{{hideTop[currentIndex]?(windowHeight-84*windowWidth/750):windowHeight-84-100-150*windowWidth/750}}px;' class='scroll-view-list' scroll-y bindscrolltolower='bindscrolltolower' bindscroll='bindscroll'> <!--纵向scroll-view用于下拉页面时再次向后台请求数据 -->
       <!--用wx:for-item来验证从数据库数据绑定成功-->
-      <view class='list-box' wx:for="{{category[currentIndex].list}}" wx:for-item="Item">
-        <view class='list' bindtap='showDetails'>
+      <view class='list-box' wx:for="{{category[currentIndex].list}}" wx:for-item="item">
+      <!-- data-id、bindtap进行页面跳转 -->
+        <view class='list' bindtap='showDetails' data-id="{{item['_id']}}">
           <view class='info'>
-          <!--用Item.title来验证从数据库数据绑定成功-->
-            <view class='title'>{{Item.title}}</view>
-            <view class='text'>{{Item.author}} 阅读量：{{Item.count}}</view>
+          <!--用item.title来验证从数据库数据绑定成功-->
+            <view class='title'>{{item.title}}</view>
+            <view class='text'>{{item.author}} 阅读量：{{item.count}}</view>
           </view>
-          <view class='cover'><image src='{{Item.cover}}'></image></view>
+          <view class='cover'><image src='{{item.cover}}'></image></view>
         </view>
       </view>
     </scroll-view>

@@ -44,10 +44,10 @@
 					"query": "categoryId=1"
 				},
 				{
-					"id": 2,
-					"name": "带分类id",
-					"pathName": "pages/index/index",
-					"query": "categoryId=1"
+					"id": -1,
+					"name": "详情页面",
+					"pathName": "pages/details/index",
+					"query": "id=XJI-duSiwXKAQr90"
 				}
 			]
 		}

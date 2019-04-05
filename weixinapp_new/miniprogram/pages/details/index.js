@@ -1,53 +1,41 @@
-// miniprogram/pages/details/index.js
+const utils = require('../../utils/util.js');
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-
+    details: {},
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getNewsById(options.id);
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+  getNewsById: function (_id) {
+    const db = wx.cloud.database()
+    db.collection('news').where({ 
+      _id  
+    }).get({
+        success: res => {
+          let details = res.data[0];
 
-  },
+          // 使用微信开发者工具自带插件格式化时间格式
+          details.createtime = utils.formatTime(details.createtime);
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+          this.setData({details});
+          console.log('[数据库] [查询记录] 成功: ', res)
+        },
+        fail: err => {
+          wx.showToast({
+            icon: 'none',
+            title: '查询记录失败'
+          })
+          console.error('[数据库] [查询记录] 失败：', err)
+        }
+      })
   },
 
   /**

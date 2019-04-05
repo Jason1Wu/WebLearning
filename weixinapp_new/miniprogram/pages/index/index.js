@@ -122,8 +122,8 @@ bindscrolltolower: function() {
   db.collection('news').where({
     categoryId
   })
-    .skip((pages - 1) * 2) // 跳过结果集中的前 2 条，从第 3 条开始返回
-    .limit(2) // 限制返回数量为 2 条
+    // .skip((pages - 1) * 2) // 跳过结果集中的前 2 条，从第 3 条开始返回
+    // .limit(2) // 限制返回数量为 2 条
     .get({
       success: res => {
         if (res.data.length == 0) {
@@ -135,8 +135,8 @@ bindscrolltolower: function() {
         let currentIndex = this.data.currentIndex;
         let tempObj = {};
         let tempkey = 'category[' + currentIndex + '].list';
-        tempObj[tempkey] = this.data.category[this.data.currentIndex].list.concat(res.data);
-        // tempObj[tempkey] = res.data;
+        // tempObj[tempkey] = this.data.category[this.data.currentIndex].list.concat(res.data);
+        tempObj[tempkey] = res.data;
         this.setData(tempObj);
 
         console.log('[数据库] [查询记录] 成功: ', res);
@@ -164,9 +164,11 @@ bindscrolltolower: function() {
 
   },
 
-  showDetails: function(){
+  showDetails: function(event){
+    console.log(event)
+    let id = event.currentTarget.dataset.id;
     wx.navigateTo({
-      url: '/pages/details/index',
+      url: `/pages/details/index?id=${id}`,
     })
   },
 
@@ -181,9 +183,11 @@ bindscrolltolower: function() {
         var listIsEnd = res.data.map(function(){
           return 0;
         });
+        let hideTop = listIsEnd;
         this.setData({
           category: res.data,
           listIsEnd,
+          hideTop,
         });
         this.getNews(res.data[0]['_id']);
         console.log('[数据库] [查询记录] 成功: ', res)
@@ -229,4 +233,18 @@ bindscrolltolower: function() {
       }
     })
   },
+
+  bindscroll: function(event) {
+    let scrollTop = event.detail.scrollTop;
+    let tempObj = {}
+    let tempKey = 'hideTop[' + this.data.currentIndex + ']'
+    this.setData(tempObj)
+    if(scrollTop>5) {
+      tempObj[tempKey] = 1;
+    }
+    else {
+      tempObj[tempKey] = 0;
+    }
+    this.setData(tempObj);
+  }
 })
